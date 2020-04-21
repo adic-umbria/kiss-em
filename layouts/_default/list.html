@@ -15,7 +15,7 @@
     
     <div  class ="container">
         
-        <a href="/micro"><h2 class="areatitle">{{ i18n "microblog_title" }}</h2></a>
+        <h2 class="areatitle">{{ i18n "microblog_title" }}</h2>
 
         <!-- show "number" of latest "micro" type articles -->
         {{ range first .Site.Params.microblog.number (where .Site.RegularPages.ByDate.Reverse "Section" "==" "micro") }}
@@ -50,7 +50,7 @@
 
     <div class="container">
 
-        <a href="/blog"><h2 class="areatitle">{{ i18n "blog_title" }}</h2></a>
+        <h2 class="areatitle">{{ i18n "blog_title" }}</h2>
 
         <!-- Loop through all posts filtered by type "article" -->
         {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "==" "blog") }}
